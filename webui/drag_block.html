@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>drag</title>
+		<meta http-equiv="Content-Type" content=text/html; charset=UTF-8>
+		<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.7.3.custom.min.js"></script>
+		<style type="text/css">
+			#block {
+				height: 100px;
+				width: 128px;
+				border-radius: 20px;
+				background: #F0D14A;
+				position: relative;
+				overflow: hidden;
+			}
+
+			#wrap {
+				width: 275px;
+			}
+
+			#field {
+				font: italic 50px/100px sans-serif, Arial;
+				position: absolute;
+				top: -200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="block">
+				<span id="field"></span>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+
+	var field = document.getElementById("field"),
+		block = document.getElementById("block"),
+		date;
+
+	function single_click() {
+		block.style.width = "200px";
+	};
+
+	function double_click() {
+		block.style.width = "275px";
+		field.style.top = "0";
+		this.onclick = function(){};
+	};
+
+	function insertTime() {
+		field.innerHTML = new Date;
+	};
+
+	setInterval(insertTime, 100);
+
+	block.onclick = single_click;
+	block.ondblclick = double_click;
+
+	// Drag and drop
+	function fixEvent(e) {
+		e = e || window.event;
+		return e;
+	};
+
+	var move_block = document.getElementById('wrap');
+
+	move_block.onmousedown = function(e) {
+
+	  	var self = this;
+	  	e = fixEvent(e);
+	 
+		this.style.position = 'absolute';
+		  
+		function moveAt(e) {
+		self.style.left = e.pageX-75+'px';
+		self.style.top = e.pageY-50+'px';
+		}
+		 
+		document.onmousemove = function(e) {
+			e = fixEvent(e);
+			moveAt(e);
+		}
+		 
+		this.onmouseup = function() {
+			document.onmousemove = self.onmouseup = null;
+		}
+	}
+
+	</script>
+	
+</html>

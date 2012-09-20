@@ -1,0 +1,75 @@
+h2 {
+	margin: 50px 0 0 0;
+}
+
+.main-wrap {
+	margin: 50px auto;
+	width: 500px;
+	position: relative;
+}
+
+.tab-1,
+.tab-2,
+.tab-3 {
+	width: 75px;
+	height: 35px;
+	background: #fff;
+	margin: 0 10px 0 0;
+	float: left;
+	border: 1px solid #000;
+	border-bottom: none;
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	cursor: pointer;
+	text-align: center;
+	font: italic 16px/35px Open Sans, Arial;
+}
+
+.tab-1:hover,
+.tab-2:hover,
+.tab-3:hover {
+	background: #ccc;
+}
+
+.tab-1.active,
+.tab-2.active,
+.tab-3.active {
+	height: 38px;
+	z-index: 10;
+	font-weight: bold;
+	-moz-box-shadow: 2px -6px 9px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 2px -6px 9px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px -6px 9px rgba(0, 0, 0, 0.3);
+}
+
+.tab-1.active+.page-1,
+.tab-2.active+.page-2,
+.tab-3.active+.page-3 {
+	z-index: -2;
+}
+
+.active:hover {
+	background: #fff;
+}
+
+.page-1,
+.page-2,
+.page-3 {
+	width: 300px;
+	height: 150px;
+	border: 2px solid #000;
+	border-left: none;
+	border-bottom: none;
+	border-radius: 10px;
+    padding: 10px;
+	background: #fff;
+	position: absolute;
+	top: 37px;
+	left: -10px;
+	z-index: -3;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+}

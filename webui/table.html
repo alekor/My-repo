@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<title>table</title>
+		<style type="text/css">
+			.table-wrap {
+				margin: 20px auto;
+				width: 1000px;
+			}
+			.table-wrap>div  {
+				float: left;
+			}
+			table {
+				float: left;
+			}
+			td {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="table-wrap">
+			<table border="1px solid #000" id="table">
+				<tr>
+					<td>id1</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id2</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id3</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id4</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id5</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id6</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id7</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id8</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id9</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+				<tr>
+					<td>id10</td>
+					<td>First Name</td>
+					<td>Last Name</td>
+					<td>Age</td>
+				</tr>
+			</table>
+			<div style="float: left;">
+				<div>
+					<input type="button" id="add_1st" value="add first"/>
+					<input type="button" id="add_2nd" value="add second"/>
+					<input type="button" id="add_last" value="add last"/>	
+				</div>
+				<div>
+					<input type="button" id="del_1st" value="del first"/>
+					<input type="button" id="del_2nd" value="del second"/>
+					<input type="button" id="del_last" value="del last"/>	
+				</div>
+			</div>
+
+			<script type="text/javascript">
+			
+			(function() {
+
+				var table = document.getElementById("table"),
+					but_add_first = document.getElementById("add_1st"),
+					but_add_second = document.getElementById("add_2nd"),
+					but_add_last = document.getElementById("add_last"),
+					but_del_first = document.getElementById("del_1st"),
+					but_del_second = document.getElementById("del_2nd"),
+					but_del_last = document.getElementById("del_last");
+
+					//add lines
+				var add_first_line = function() {
+					var new_row = table.insertRow(0);
+						new_row.insertCell(0).appendChild(document.createTextNode("id-new-1st"));
+						new_row.insertCell(1).appendChild(document.createTextNode("First Name"));
+						new_row.insertCell(2).appendChild(document.createTextNode("Last Name"));
+						new_row.insertCell(3).appendChild(document.createTextNode("Age"));
+					},
+					add_second_line = function() {
+					var new_row = table.insertRow(1);
+						new_row.insertCell(0).appendChild(document.createTextNode("id-new-2nd"));
+						new_row.insertCell(1).appendChild(document.createTextNode("First Name"));
+						new_row.insertCell(2).appendChild(document.createTextNode("Last Name"));
+						new_row.insertCell(3).appendChild(document.createTextNode("Age"));
+					},
+					add_last_line = function() {
+					var new_row = table.insertRow(-1);
+						new_row.insertCell(0).appendChild(document.createTextNode("id-new-last"));
+						new_row.insertCell(1).appendChild(document.createTextNode("First Name"));
+						new_row.insertCell(2).appendChild(document.createTextNode("Last Name"));
+						new_row.insertCell(3).appendChild(document.createTextNode("Age"));
+					};
+
+
+					but_add_first.onclick = add_first_line;
+					but_add_second.onclick = add_second_line;
+					but_add_last.onclick = add_last_line;
+
+
+
+					//delete lines 
+				var del_first_line = function() {
+					table.deleteRow(0);
+					},
+					del_second_line = function() {
+						table.deleteRow(1);
+					},
+					del_last_line = function() {
+					table.deleteRow(-1);
+				};
+
+					but_del_first.onclick = del_first_line;
+					but_del_second.onclick = del_second_line; 
+					but_del_last.onclick = del_last_line;
+				
+			})();
+
+			</script>
+		</div>
+	</body>
+</html>

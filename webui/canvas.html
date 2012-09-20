@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Canvas</title>
+    <style type="text/css">
+    	canvas { 
+        /*width: 500px; 
+        height: 750px;*/
+        border: 1px solid black; 
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="draw_board">
+      
+    </canvas>
+  </body>
+    <script type="text/javascript">
+      var canvas = document.getElementById('draw_board');
+      var ctx = canvas.getContext('2d');
+
+      canvas.addEventListener('mousedown', function(e) {
+        this.down = true;
+        this.X = e.clientX;
+        this.Y = e.clientY;
+        console.log(this.X, this.Y)
+      });
+
+      canvas.addEventListener('mouseup', function() {
+        this.down = false;
+      });
+
+      canvas.addEventListener('mousemove', function(e) {
+        if(this.down) {
+          ctx.beginPath();
+          ctx.moveTo(this.X, this.Y);
+          var x = e.clientX;
+          var y = e.clientY;
+          ctx.lineTo(x,y);
+          ctx.stroke();
+        }
+      });
+    </script>
+</html>

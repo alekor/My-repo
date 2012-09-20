@@ -1,0 +1,150 @@
+
+body {
+	position: relative;
+	font-family: sans-serif;
+}
+
+div {
+	height: 140px;
+	width: 280px;
+	background: #B0909D;
+	border-radius: 10px;
+	border: 2px solid #000;
+	border-left: none;
+	border-right: none;
+	box-shadow: -5px -4px 10px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	z-index: -1;
+	-moz-transition: top, left, z-index, height, width, background-color, 0.3s 0.1s ease;
+    -o-transition: top, left, z-index, height, width, background-color, 0.3s 0.1s ease;
+    -webkit-transition: top, left, z-index, height, width, background-color, 0.3s 0.1s ease;
+    /*-webkit-transition-property:top, left, z-index, height, width, background-color;
+	-webkit-transition-duration:0.3s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:0.2s;*/
+	/*-webkit-transition-property:z-index;
+	-webkit-transition-duration:0.5s;
+	-webkit-transition-timing-function:ease;
+	-webkit-transition-delay:0.1s;*/
+
+}
+
+h2 {
+	text-align: center;
+	margin: 0;
+	/*-webkit-transition-property:font-size;
+	-webkit-transition-duration:0.3s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:0.2s;*/
+}
+
+h2, h3 {
+	-webkit-transition-property:font-size;
+	-webkit-transition-duration:0.3s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:0.1s;
+}
+
+h3 {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	/*-webkit-transition-property:font-size, font-style;
+	-webkit-transition-duration:0.3s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:0.2s;*/
+}
+
+h3, b {
+	margin-left: 20px
+}
+
+b {
+	display: block;
+	margin-bottom: 25px;
+}
+
+span {
+	margin-left: 10px;
+	font-style: italic;
+}
+
+div:hover {
+	background-color: #D0D941;
+	cursor: pointer;
+}
+
+div:first-child {
+	top: 40px;
+	left: 40px;
+}
+
+div:first-child:hover {
+	top: 30px;
+	left: 40px;
+	z-index: 0;
+}
+
+div:nth-child(2) {
+	top: 70px;
+	left: 70px;
+}
+
+div:nth-child(2):hover {
+	top: 60px;
+	left: 70px;
+	z-index: 0;
+
+}
+
+div:nth-child(3) {
+	top: 100px;
+	left: 100px;
+}
+
+div:nth-child(3):hover {
+	top: 90px;
+	left: 100px;
+	z-index: 0;
+}
+
+div:nth-child(4) {
+	top: 130px;
+	left: 130px;
+}
+
+div:nth-child(4):hover {
+	top: 120px;
+	z-index: 0;
+	left: 130px;
+}
+
+div:nth-child(5) {
+	top: 160px;
+	left: 160px;
+}
+
+div:nth-child(5):hover {
+	z-index: 0;
+	top: 150px;
+	left: 160px;
+}
+
+div.move {
+	top: 175px;
+	left: 750px;
+	width: 400px;
+	height: 200px;
+}
+
+div.move h2 {
+	font-size: 30px;
+}
+
+div.move h3 {
+	font-size: 25px;
+}
+
+div.move:hover {
+	top: 100px;
+	left: 730px;
+}

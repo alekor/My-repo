@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>local storage</title>
+		<style type="text/css">
+			td, table {
+				border: 1px solid #000;
+			}
+			td {
+				width: 150px;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<input type="button" value="create table" id="create_table">
+		<input type="button" value="delete table" id="delete_table">
+		<input type="button" value="delete first line" id="del_1st">
+		<input type="button" value="delete last line" id="del_last">
+		<input type="button" value="add line" id="add-line">
+		<input type="button" value="sort" id="sort">
+	</body>
+	<script type="text/javascript">
+
+		var	but_create_table = document.getElementById("create_table"),
+			but_del_table = document.getElementById("delete_table"),
+			but_add = document.getElementById("add-line"),
+			but_del_first = document.getElementById("del_1st"),
+			but_del_last = document.getElementById("del_last"),
+			but_sort = document.getElementById("sort"),
+			table = document.createElement("table"),
+
+			dataFromLS,
+			users = [["1","Владимир","Петров","33"],
+					 ["4","Анастасия","Иванова","23"],
+					 ["3","Александр","Григорьев","54"],
+					 ["2","Александр","Светлов","63"],
+					 ["7","Алексей","Маркелов","26"],
+					 ["6","Валерия","Смирнова","21"],
+					 ["9","Елизавета","Макарова","27"],
+					 ["8","Илья","Маркелов","25"],
+					 ["5","Александра","Миронова","43"]];
+			localStorage.setItem('store', JSON.stringify(users));
+			dataFromLS = JSON.parse(localStorage.getItem('store'));
+
+		// function item(id,firstName,lastName,age) {
+		// 	this.id=id || "";
+		// 	this.firstName=firstName || "";
+		// 	this.lastName=lastName || "";
+		// 	this.age=age || "";
+		// };
+
+		function addNewLine() {
+			var add_id = prompt("Введите id", "id"),
+				add_firstName = prompt("Введите имя", "First name"),
+				add_lastName = prompt("Введите фамилию", "last name"),
+				add_age = prompt("Введите возраст", "Age");
+
+				dataFromLS.splice(0, 0, [add_id, add_firstName, add_lastName, add_age]);
+				users.splice(0, 0, [add_id, add_firstName, add_lastName, add_age]);
+				
+				DeleteTable();
+				CreateTable();
+		};
+			// console.log(dataFromLS); 
+
+		function CreateTable() {
+			document.getElementById("body").appendChild(table);
+			for ( var i=0; i<dataFromLS.length; i++ ) {
+					var row=document.createElement("tr");
+				for( var field in dataFromLS[i] ){
+					var td=document.createElement("td");
+					td.innerHTML=dataFromLS[i][field];
+					row.appendChild(td);
+				}
+				table.appendChild(row);
+			}
+		};
+
+		function DeleteTable() {
+			table.innerHTML = "";
+		};
+
+		function Sort() {
+			// users.sort();
+			dataFromLS.sort();
+			DeleteTable();
+			CreateTable();
+		};
+
+			// удаление строк
+
+		function del_first_line() {
+			table.deleteRow(0);
+			users.splice(1, 1);
+			dataFromLS.splice(1, 1);
+		};
+
+		function del_last_line() {
+			table.deleteRow(-1);
+			users.splice(-1, 1);
+			dataFromLS.splice(-1, 1);
+		};
+
+		but_create_table.onclick = CreateTable;
+		but_del_table.onclick = DeleteTable;
+		but_del_first.onclick = del_first_line;
+		but_del_last.onclick = del_last_line;
+		but_add.onclick = addNewLine;
+		but_sort.onclick = Sort;
+
+	</script>
+</html>

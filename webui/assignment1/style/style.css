@@ -1,0 +1,48 @@
+h1 {
+	text-align: center;
+}
+
+input {
+	width: 30px;
+}
+
+#field {
+	width: 165px;
+	margin: 0 0 10px 0;
+}
+
+.navigation {
+	float: left;
+}
+
+.calc {
+	width: 166px;
+	margin: 0 auto;
+	background: #ccc;
+
+}
+
+.calc a {
+	font: 25px verdana, Arial;
+	color: #f00;
+}
+
+.picture {
+	width: 670px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.odd {
+	background: #DBC8CF;
+}
+
+.even {
+	background: #DBAAF2;
+}
+
+.table-wraper {
+	width: 300px;
+	overflow: hidden;
+	margin: 0 auto;
+}

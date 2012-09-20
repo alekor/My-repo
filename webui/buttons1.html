@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Buttons</title>
+		<meta charset=utf-8>
+		<style type="text/css">
+			input {
+				display: block;
+				width: 150px;
+				height: 50px;
+				margin: 20px auto;
+				border-radius: 10px;
+				font: italic 20px Arial;
+			}
+
+			input:nth-child(1){background: #E01B1B; margin-top: 100px;}
+			input:nth-child(2){background: #FF8800;}
+			input:nth-child(3){background: #FCFC19;}
+			input:nth-child(4){background: #39D443;}
+			input:nth-child(5){background: #4CEBFC;}
+			input:nth-child(6){background: #1518E8;}
+			input:nth-child(7){background: #B315E8;}
+		</style>
+	</head>
+	<body>
+		<input type='button' value='red button'>
+		<input type='button' value='orange button'>
+		<input type='button' value='yellow button'>
+		<input type='button' value='green button'>
+		<input type='button' value='azure button'>
+		<input type='button' value='blue button'>
+		<input type='button' value='violet button'>
+
+		<script type="text/javascript">
+			
+			var buttons = document.getElementsByTagName('input');
+
+			function  ObjCounter() {
+				this.GetNumber = function(obj) {
+					for(var i=0 ; i < buttons.length ; i++){
+						if (obj == buttons[i]) return i;
+					}
+				}
+			}
+
+			function Message() {
+				this.Show = function(str) {
+					alert(str);
+				}
+			}
+
+			function eventHandler() {
+				for ( var i = 0; i < buttons.length; i++) {
+						buttons[i].onclick = function() {
+							var oCounter = new ObjCounter();
+							var num = oCounter.GetNumber(this);
+							var messageObj = new Message();
+							messageObj.Show('button №' + (++num) + '  Hi! I am the ' + this.value + '!');				
+						}
+					} 
+			}
+
+			document.body.onload = eventHandler();
+
+		</script>
+	</body>
+</html>
