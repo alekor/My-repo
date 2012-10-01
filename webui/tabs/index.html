@@ -5,25 +5,45 @@
 	</head>
 	<body>
 		<div class="main-wrap">
-			<div class="tab-1">
+			<div class="tab">
 				<span>Tab1</span>
 			</div>
-			<div class="page-1">
+			<div class="page">
 				<h2>Exciting fact!</h2>
 			</div>
-			<div class="tab-2">
-			<div class="page-2">
+			<div class="tab">
+			<div class="page">
 				<h2>Some more interesting content!</h2>
 			</div>
 				<span>Tab2</span>
 			</div>
-			<div class="tab-3">
+			<div class="tab">
 				<span>Tab3</span>
 			</div>
-			<div class="page-3">
+			<div class="page">
 				<h2>Great news!</h2>
 			</div>
-
 		</div>
+	
+		<script type="text/javascript">
+
+			(function(){
+				var tab = document.getElementsByClassName("tab");
+
+					for (var i = 0; i < tab.length; i++) {
+							tab[i].onclick = function() {
+								if (this.className = 'tab active') {
+									return
+								} else if (this.className = 'tab') {
+									this.classList.add('active');
+								}
+								console.log('click');
+						}
+					}
+
+					
+			})()
+
+		</script>
 	</body>
 </html>
