@@ -1,0 +1,385 @@
+/*----reset----*/
+
+html,body,div,span,
+h1,h2,h3,h4,h5,h6,p,
+a,li,ol,ul,address {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	line-height: 1;
+	font-family: inherit;
+	text-align: left;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+/*--------------*/
+
+.main-wrap {
+    min-width: 1200px;
+}
+
+a {
+    color:  red;
+}
+
+span {
+    color: gray;
+}
+
+/*----header----*/
+
+.header {
+    height: 110px;
+    background: #a5041b;
+}
+
+.logo1 {
+    float: left;
+    margin: 10px 50px 0 10px;
+}
+
+.logo2 {
+    width: 155px;
+    float: left;
+    overflow: hidden;
+    height: 162px;
+    background: url(../img/logo2.png) no-repeat;
+}
+
+.logo2 div {
+    height: 30px;
+    width: 110px;
+    background: #a2041b;
+    margin: 15px 0 0 15px;
+}
+
+.external-link {
+    text-decoration: none;
+    font-style: italic;
+    color: #ECFA51;
+    font-size: 15px;
+}
+
+.online-order {
+    height: 125px;
+}
+
+.order-title {
+    width: 410px;
+    float: left;
+    clear: both;
+    color: #c00000; 
+    font-size: 30px; 
+    margin: 0 0 0 30px; 
+    
+}
+
+.online-order p, .our-partners p, h4 {
+    border-bottom: 1px dotted gray; 
+}
+
+.order-status {
+    float: right;
+    margin-right: 200px;
+}
+
+.your-order {
+    height: 41px; 
+    background: url(../img/your-order.png) no-repeat;  
+    margin: -70px 0 30px 169px;
+}
+
+.count-order {
+    float: left;
+    margin-top: -15px;
+}
+
+.count-order div:first-child {
+    width: 203px; 
+    text-align: right;
+    float: left;
+    line-height: 55px;
+    margin-right: 10px;
+}
+
+.count-order span { 
+    font-size: 20px;   
+}
+
+.make-order {
+    float: right;
+    line-height: 60px;
+}
+
+.make-order a {
+    font-size: 21px;
+}
+
+.make-order div {
+    height: 50px;
+    width: 45px !important;
+    border: 5px solid #f2e7d9; 
+    text-align: center !important;   
+    margin-right: 10px;
+}
+
+.make-order span {
+    line-height: 50px;
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+/*----left-sidebar----*/
+
+.left-sidebar {
+    float: left;
+    margin: 100px 50px 0 0;
+}
+
+.ask-question {
+    width: 240px;
+    height: 200px;
+    border-bottom: 1px dotted grey;
+    margin-left: 30px;
+}
+
+.picture {
+    height: 60px;
+    width: 53px;
+    border: 5px solid #f2e7d9; 
+    background: url(../img/picture2.png) no-repeat center;
+    float: left;
+    clear: both; 
+    text-align: center;
+    margin-right: 10px;
+}
+ 
+.chef1 .picture {
+    background: url(../img/picture1.png) no-repeat center;
+    margin-bottom: 25px;
+}
+
+.ask-question span {
+    display: block;
+    padding: 20px 0 0 10px; 
+}
+
+.chef2 span {
+    padding-top: 60px;
+}
+
+.quotes {
+    width: 215px; 
+    background: url(../img/first-quote.png) no-repeat;  
+    padding: 0 0 0 15px; 
+    margin: 20px 0 0 15px;
+    line-height: 20px;
+}
+
+.quotes a {
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.quotes div {
+    display: inline;
+    position: relative;
+}
+
+.quotes img {
+    position: absolute;
+    top: 13px;
+    left: 5px;
+}
+
+.extra-offer {
+    margin: 15px 0 0 30px;
+    background: url(../img/some-specific-offer.png);
+    width: 190px;
+    height: 270px;
+    border: 1px solid white;
+}
+
+.extra-offer p {
+    font-style: italic;
+    color: #ECFA51;
+    width: 170px;
+    text-align: center;
+    margin: 20px 0 0 10px;
+}
+
+.partner {
+    border: 5px solid #f2e7d9; 
+    width: 176px;
+    height: 66px;
+    margin-bottom: 10px ;
+}
+
+.our-partners {
+    margin-left: 30px;
+}
+
+.our-partners p {
+    color: red;
+    width: 110px;
+    display: block;
+    margin: 30px 0 20px 0;
+}
+
+
+/*-----middle-section------*/
+
+.food-selection { 
+    height: 1000px;
+    position: relative;
+    clear: right;
+    overflow: hidden;
+}
+    
+.wrap-col1 { 
+    width: 33%; 
+    float: left;
+}
+
+.wrap-col2 { 
+    left: 33%; 
+    width: 34%;
+    position: absolute; 
+}
+
+.wrap-col3 { 
+    right: 0; 
+    width: 33%; 
+    position: absolute;
+}
+
+.food-category {
+   width: 250px;
+}
+
+.food-category span {
+    display: block;
+    clear: both;
+    margin-bottom: 25px;
+}
+
+.category-title {
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px dotted grey; 
+    float: left; 
+    margin-bottom: 10px;  
+}
+
+/*-------footer-------*/
+
+.footer {
+    height: 330px;
+    clear: both;
+}
+
+.contacts {
+    width: 246px;
+    float: left;
+    margin: 50px 0 0 20px;
+}
+
+.contacts span {
+    color: red;
+}
+
+address, .contacts a, h4 {
+    color: grey;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.contacts a, .some-events a {
+    display: block;
+    margin-top: 20px;
+}
+
+.tel-number {
+    color: red;
+    font-size: 25px;
+}
+
+.event-picture {
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.event-picture div {
+    width: 90px;
+    height: 60px;
+    border: 5px solid #f2e7d9;
+    
+}
+
+.some-events {
+    overflow: hidden;   
+    position: relative;
+    height: 330px;
+    padding-left: 25px;
+}
+
+.event1, .event2, .event3 {
+    position: absolute;
+    width: 230px;
+    margin-top: 20px;
+}
+
+.event2 {
+    left: 35%;
+}
+
+.event3 {
+    right: 10%;
+}
+
+
+/*-------inside-page-------*/
+
+.food-selection-list {
+    padding: 0px 0px 25px 30px;
+    border-bottom: 1px dotted gray;
+    margin: 0px 0px 25px 30px;
+}
+
+.food-selection-list a {
+    color: gray;
+    line-height: 25px;
+}
+
+
+/*-------clearfix-------*/
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
