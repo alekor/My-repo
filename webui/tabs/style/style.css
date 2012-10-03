@@ -37,7 +37,7 @@ h2 {
     box-shadow: 2px -6px 9px rgba(0, 0, 0, 0.3);
 }
 
-.tab.active+.page-3 {
+.tab.active+.page {
 	z-index: -2;
 }
 
